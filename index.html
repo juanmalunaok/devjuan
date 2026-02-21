@@ -337,6 +337,10 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;color:inhe
               <option value="Más de 10.000">Más de $10.000</option>
             </select>
           </div>
+          <div class="cf-group">
+            <label class="cf-label" for="problema">¿Qué problema necesitás resolver?</label>
+            <textarea class="cf-input" id="problema" name="problema" rows="3" placeholder="Contanos brevemente qué proceso querés automatizar..." style="resize:vertical;min-height:80px;max-height:160px"></textarea>
+          </div>
           <button type="submit" class="btn btn-g cf-submit">Solicitar contacto →</button>
         </form>
         <div id="formMessage" class="cf-msg"></div>
@@ -443,6 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
       email: form.email.value,
       telefono: form.telefono.value,
       presupuesto: form.presupuesto.value,
+      problema: form.problema.value,
       fecha: new Date().toISOString(),
       origen: 'Portfolio Web'
     };
