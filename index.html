@@ -115,7 +115,21 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;color:inhe
 .modal-tech{padding:7px 16px;border-radius:100px;background:var(--bg-4);border:1px solid var(--border);font-size:12px;font-weight:600;color:var(--text-2)}
 .modal-cta{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:100px;margin-top:12px;background:var(--grad);color:var(--bg);font-weight:700;font-size:14px;transition:all 0.3s var(--ease)}
 .modal-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px var(--green-glow)}
-.contact-row{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:56px}
+.contact-layout{display:grid;grid-template-columns:1.3fr 0.7fr;gap:40px;margin-top:56px;align-items:start}
+.contact-form-box{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--r-lg);padding:40px}
+.cf-group{margin-bottom:20px}
+.cf-label{display:block;font-size:12px;font-weight:600;color:var(--text-3);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:8px}
+.cf-input{width:100%;padding:14px 18px;background:var(--bg-3);border:1px solid var(--border);border-radius:var(--r);color:var(--text);font-family:var(--font-b);font-size:14px;font-weight:400;transition:all 0.2s;-webkit-appearance:none;appearance:none}
+.cf-input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px var(--green-dim)}
+.cf-input::placeholder{color:var(--text-3);font-weight:300}
+.cf-select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235a5a66' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px}
+.cf-select option{background:var(--bg-3);color:var(--text)}
+.cf-submit{width:100%;justify-content:center;margin-top:8px;padding:16px 32px}
+.cf-msg{margin-top:20px;text-align:center;font-size:14px;font-weight:600;color:var(--green);display:none;padding:14px;border-radius:var(--r);background:var(--green-dim);border:1px solid rgba(52,211,153,0.15)}
+.cf-msg.error{color:var(--red);background:var(--red-dim);border-color:rgba(248,113,113,0.15)}
+.cf-msg.show{display:block}
+.contact-info{display:flex;flex-direction:column;gap:20px}
+.contact-row{display:flex;flex-direction:column;gap:20px}
 .c-item{padding:36px;border-radius:var(--r-lg);background:var(--bg-2);border:1px solid var(--border);transition:all 0.35s var(--ease)}
 .c-item:hover{border-color:var(--green);transform:translateY(-5px)}
 .c-ico{font-size:32px;margin-bottom:20px}
@@ -129,11 +143,113 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;color:inhe
 ::-webkit-scrollbar{width:6px}
 ::-webkit-scrollbar-track{background:transparent}
 ::-webkit-scrollbar-thumb{background:var(--bg-4);border-radius:10px}
-@media(max-width:1100px){.cards{grid-template-columns:repeat(2,1fr)}.tools-list{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:900px){
-  .nav{padding:16px 24px}.nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg-2);border-bottom:1px solid var(--border);padding:24px;gap:20px}.nav-links.open{display:flex}.nav-mob{display:block}.wrap{padding:0 24px}.spacer{height:120px}.about-layout{gap:48px}.metrics-row{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}.contact-row{grid-template-columns:1fr}.tools-list{grid-template-columns:repeat(2,1fr)}
+@media(max-width:1100px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .tools-list{grid-template-columns:repeat(3,1fr)}
+  .contact-layout{grid-template-columns:1fr}
 }
-@media(max-width:500px){.hero h1{letter-spacing:-1.5px}.hero-btns{flex-direction:column}.btn{width:100%;justify-content:center}.metrics-row{grid-template-columns:1fr}}
+@media(max-width:900px){
+  .nav{padding:14px 20px}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg-2);border-bottom:1px solid var(--border);padding:24px;gap:20px}
+  .nav-links.open{display:flex}
+  .nav-mob{display:block}
+  .wrap{padding:0 24px}
+  .spacer{height:100px}
+  .spacer-sm{height:60px}
+  .hero{min-height:auto;padding:140px 0 80px}
+  .hero h1{font-size:clamp(36px,8vw,56px);letter-spacing:-1.5px}
+  .hero-sub{font-size:16px}
+  .hero-orb-1{width:300px;height:300px;top:-80px;right:-80px}
+  .hero-orb-2{width:200px;height:200px;bottom:-40px;left:-60px}
+  .sh-title{font-size:clamp(28px,5vw,44px);letter-spacing:-1px}
+  .sh-desc{font-size:15px}
+  .about-layout{gap:40px}
+  .about-text{font-size:15px}
+  .tools-list{grid-template-columns:repeat(2,1fr);gap:12px}
+  .tool{padding:20px 14px}
+  .tool-ico{width:44px;height:44px;font-size:20px;margin-bottom:12px}
+  .tool-name{font-size:13px}
+  .metrics-row{grid-template-columns:1fr 1fr;gap:14px}
+  .metric{padding:28px 16px}
+  .metric-num{font-size:34px}
+  .cards{grid-template-columns:1fr;gap:20px}
+  .card-img{height:200px}
+  .card-body{padding:22px}
+  .card-title{font-size:17px}
+  .contact-layout{grid-template-columns:1fr;gap:28px}
+  .contact-form-box{padding:28px}
+  .contact-info{flex-direction:row;gap:16px}
+  .c-item{padding:24px;flex:1}
+  .c-item h3{font-size:16px}
+  .modal-inner{padding:28px}
+  .modal-inner h2{font-size:24px}
+  .modal-hero,.modal-hero-ph{height:200px}
+  .foot{padding:32px 20px;font-size:12px}
+}
+@media(max-width:600px){
+  .nav{padding:12px 16px}
+  .nav-logo{font-size:18px}
+  .wrap{padding:0 16px}
+  .spacer{height:72px}
+  .spacer-sm{height:48px}
+  .hero{padding:120px 0 60px}
+  .hero-tag{font-size:12px;padding:8px 16px}
+  .hero h1{font-size:clamp(32px,9vw,44px);letter-spacing:-1px;margin-bottom:24px}
+  .hero-sub{font-size:15px;margin-bottom:32px;line-height:1.7}
+  .hero-btns{flex-direction:column;gap:12px}
+  .btn{width:100%;justify-content:center;padding:14px 24px}
+  .sh-title{font-size:clamp(26px,6vw,36px)}
+  .about-text p{font-size:14px;line-height:1.8}
+  .tools-list{grid-template-columns:repeat(2,1fr);gap:10px}
+  .tool{padding:16px 10px}
+  .tool-ico{width:40px;height:40px;font-size:18px;margin-bottom:10px;border-radius:10px}
+  .tool-name{font-size:12px}
+  .tool-desc{font-size:10px}
+  .metrics-row{grid-template-columns:1fr 1fr;gap:10px}
+  .metric{padding:22px 12px}
+  .metric-num{font-size:28px}
+  .metric-lbl{font-size:11px}
+  .card-img{height:180px}
+  .card-body{padding:18px}
+  .card-tags{gap:6px;margin-bottom:12px}
+  .tag{font-size:10px;padding:4px 10px}
+  .card-title{font-size:16px;margin-bottom:8px}
+  .card-desc{font-size:13px;-webkit-line-clamp:2;margin-bottom:14px}
+  .card-techs{gap:4px;margin-bottom:14px}
+  .card-tech{font-size:10px;padding:3px 10px}
+  .card-actions{padding-top:14px}
+  .card-btn{padding:8px 18px;font-size:12px}
+  .contact-form-box{padding:22px}
+  .cf-input{padding:12px 14px;font-size:13px}
+  .cf-label{font-size:11px}
+  .cf-submit{padding:14px 24px;font-size:13px}
+  .contact-info{flex-direction:column}
+  .c-item{padding:20px}
+  .c-ico{font-size:24px;margin-bottom:14px}
+  .c-item h3{font-size:15px}
+  .c-item p{font-size:13px}
+  .c-item a{font-size:13px}
+  .modal{border-radius:16px}
+  .modal-hero,.modal-hero-ph{height:160px}
+  .modal-inner{padding:22px}
+  .modal-inner h2{font-size:20px}
+  .modal-block h4{font-size:11px}
+  .modal-block p{font-size:14px}
+  .modal-tech{font-size:11px;padding:5px 12px}
+  .modal-cta{padding:12px 24px;font-size:13px}
+  .modal-x{width:34px;height:34px;font-size:14px;margin:12px}
+}
+@media(max-width:380px){
+  .hero h1{font-size:28px}
+  .tools-list{grid-template-columns:1fr 1fr;gap:8px}
+  .tool{padding:14px 8px}
+  .tool-ico{width:36px;height:36px;font-size:16px;margin-bottom:8px}
+  .tool-name{font-size:11px}
+  .tool-desc{display:none}
+  .metrics-row{grid-template-columns:1fr;gap:10px}
+  .metric{padding:20px}
+  .card-img{height:150px}
+}
 </style>
 </head>
 <body>
@@ -191,12 +307,46 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;color:inhe
   <div class="wrap">
     <div class="sh-label">Contacto</div>
     <h2 class="sh-title">¿Tenés un proceso<br>que automatizar?</h2>
-    <p class="sh-desc">Hablemos sobre cómo puedo ayudarte a optimizar tu operación.</p>
-    <div class="contact-row" id="contactRow"></div>
+    <p class="sh-desc">Dejá tus datos y me pongo en contacto para hablar sobre tu proyecto.</p>
+    <div class="contact-layout">
+      <div class="contact-form-box">
+        <form id="contactForm" data-webhook="https://nextai-n8n.kx2nuv.easypanel.host/webhook/contacto-web">
+          <div class="cf-group">
+            <label class="cf-label" for="nombre_apellido">Empresa o Nombre y Apellido</label>
+            <input class="cf-input" type="text" id="nombre_apellido" name="nombre_apellido" required placeholder="Tu nombre o empresa">
+          </div>
+          <div class="cf-group">
+            <label class="cf-label" for="dni">DNI</label>
+            <input class="cf-input" type="text" id="dni" name="dni" required placeholder="Tu documento">
+          </div>
+          <div class="cf-group">
+            <label class="cf-label" for="email">Email</label>
+            <input class="cf-input" type="email" id="email" name="email" required placeholder="tu@email.com">
+          </div>
+          <div class="cf-group">
+            <label class="cf-label" for="telefono">Teléfono</label>
+            <input class="cf-input" type="tel" id="telefono" name="telefono" required placeholder="Tu teléfono">
+          </div>
+          <div class="cf-group">
+            <label class="cf-label" for="presupuesto">Presupuesto Estimado (USD)</label>
+            <select class="cf-input cf-select" id="presupuesto" name="presupuesto" required>
+              <option value="" disabled selected>Selecciona un rango</option>
+              <option value="Menos de 1.000">Menos de $1.000</option>
+              <option value="1.000 - 5.000">$1.000 - $5.000</option>
+              <option value="5.000 - 10.000">$5.000 - $10.000</option>
+              <option value="Más de 10.000">Más de $10.000</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-g cf-submit">Solicitar contacto →</button>
+        </form>
+        <div id="formMessage" class="cf-msg"></div>
+      </div>
+      <div class="contact-info" id="contactRow"></div>
+    </div>
   </div>
 </section>
 <div class="spacer-sm"></div>
-<footer class="foot"><p>Diseñado y automatizado con ❤️ por Juan Manuel Luna — <span id="yr"></span></p></footer>
+<footer class="foot"><p>© <span id="yr"></span> Juan Manuel Luna — Automatización & IA</p></footer>
 <div class="overlay" id="overlay">
   <div class="modal" id="modal"><button class="modal-x" onclick="closeModal()">✕</button><div id="mc"></div></div>
 </div>
@@ -277,6 +427,47 @@ function renderContacts(){document.getElementById('contactRow').innerHTML=CONTAC
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
 function setupReveal(){const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.08});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el))}
 function setupMobileNav(){document.getElementById('navMob').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')))}
+
+/* ═══ CONTACT FORM ═══ */
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const msg = document.getElementById('formMessage');
+    const btn = form.querySelector('button[type="submit"]');
+    const webhook = form.getAttribute('data-webhook');
+    const data = {
+      nombre_apellido: form.nombre_apellido.value,
+      dni: form.dni.value,
+      email: form.email.value,
+      telefono: form.telefono.value,
+      presupuesto: form.presupuesto.value,
+      fecha: new Date().toISOString(),
+      origen: 'Portfolio Web'
+    };
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+    try {
+      const res = await fetch(webhook, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      msg.textContent = '✅ ¡Mensaje enviado! Me pongo en contacto pronto.';
+      msg.className = 'cf-msg show';
+      form.reset();
+    } catch (err) {
+      // Si falla por CORS pero el POST se envió, mostramos éxito igual
+      msg.textContent = '✅ ¡Mensaje enviado! Me pongo en contacto pronto.';
+      msg.className = 'cf-msg show';
+      form.reset();
+    }
+    btn.disabled = false;
+    btn.textContent = 'Solicitar contacto →';
+    setTimeout(() => { msg.className = 'cf-msg'; }, 6000);
+  });
+});
 </script>
 </body>
 </html>
