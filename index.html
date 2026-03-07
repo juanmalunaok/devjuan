@@ -546,8 +546,8 @@
 
         /* ===== ANIMATIONS ===== */
         .fade-up {
-            opacity: 0;
-            transform: translateY(30px);
+            opacity: 1;
+            transform: translateY(0);
             transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
@@ -758,7 +758,7 @@
                     </div>
                     <div class="contact-extra-item">
                         <p class="contact-extra-label">Email</p>
-                        <p class="contact-extra-value"><a href="mailto:juanmalunaok@gmail.com">juanmalunaok@gmail.com</a></p>
+                        <p class="contact-extra-value"><a href="mailto:juanma.lunaok@gmail.com">juanma.lunaok@gmail.com</a></p>
                     </div>
                     <div class="contact-extra-item">
                         <p class="contact-extra-label">Web</p>
@@ -798,18 +798,4 @@
         // Mobile nav
         document.querySelector('.mobile-menu-btn')?.addEventListener('click', function() {
             const nav = document.querySelector('.nav-links');
-            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-            nav.style.flexDirection = 'column';
-            nav.style.position = 'absolute';
-            nav.style.top = '70px';
-            nav.style.right = '24px';
-            nav.style.background = 'rgba(10,10,10,0.95)';
-            nav.style.padding = '20px';
-            nav.style.borderRadius = '12px';
-            nav.style.border = '1px solid #222';
-            nav.style.gap = '16px';
-        });
-    </script>
-
-</body>
-</html>
+            nav.st
