@@ -234,13 +234,18 @@ section { padding: 120px 0; }
 .panel.solution li::before { content: '✓'; color: var(--accent); }
 
 /* ===== FOOTER ===== */
-footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; }
-footer p { font-size: 0.8rem; color: var(--text-muted); }
+footer { padding: 32px 0; border-top: 1px solid var(--border); }
+footer .container { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+footer p { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
 footer span { color: var(--accent); }
-.footer-social { margin-top: 16px; display: flex; justify-content: center; gap: 16px; }
-.footer-social a { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.8rem; font-family: var(--font-mono); transition: color 0.3s; }
+.footer-social { display: flex; align-items: center; gap: 16px; }
+.footer-social a { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.8rem; font-family: var(--font-mono); transition: color 0.3s; line-height: 1; }
 .footer-social a:hover { color: var(--accent); }
-.footer-social svg { width: 16px; height: 16px; }
+.footer-social svg { width: 16px !important; height: 16px !important; flex-shrink: 0; }
+
+@media (max-width: 640px) {
+    footer .container { flex-direction: column; gap: 12px; text-align: center; }
+}
 
 /* ===== FLOATING WHATSAPP ===== */
 .whatsapp-float {
