@@ -7,6 +7,23 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+// Mobile menu toggle (with X animation + close on link click)
+const menuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+if (menuBtn && navLinks) {
+    menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('show');
+        menuBtn.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+            menuBtn.classList.remove('active');
+        });
+    });
+}
+
 // Track WhatsApp clicks (GA4 + Google Ads conversion)
 function trackWhatsAppClick(source) {
     if (typeof gtag === 'function') {
