@@ -46,7 +46,8 @@
       "makesOffer": [
         { "@type": "Offer", "name": "Desarrollo de Apps a Medida", "description": "Apps web y móviles para negocios: pedidos, turnos, entregas, gestión interna.", "priceSpecification": { "@type": "PriceSpecification", "price": "500", "priceCurrency": "USD", "minPrice": "500" } },
         { "@type": "Offer", "name": "Páginas Web Profesionales", "description": "Diseño y desarrollo web a medida con SEO, hosting y dominio. E-commerce con MercadoPago.", "priceSpecification": { "@type": "PriceSpecification", "price": "600", "priceCurrency": "USD", "minPrice": "600" } },
-        { "@type": "Offer", "name": "Automatizaciones con IA", "description": "Workflows con n8n, agentes de WhatsApp, integración de sistemas y procesos automatizados con IA.", "priceSpecification": { "@type": "PriceSpecification", "price": "500", "priceCurrency": "USD", "minPrice": "500" } }
+        { "@type": "Offer", "name": "Automatizaciones con IA", "description": "Workflows con n8n, agentes de WhatsApp, integración de sistemas y procesos automatizados con IA.", "priceSpecification": { "@type": "PriceSpecification", "price": "500", "priceCurrency": "USD", "minPrice": "500" } },
+        { "@type": "Offer", "name": "Plan de Mantenimiento Mensual", "description": "Hosting profesional, SSL, backups semanales, actualizaciones de seguridad, soporte técnico y cambios menores mensuales para tu web o app.", "priceSpecification": { "@type": "PriceSpecification", "price": "200", "priceCurrency": "USD", "minPrice": "100", "billingIncrement": "P1M" } }
       ]
     }
     </script>
@@ -57,7 +58,8 @@
       "mainEntity": [
         { "@type": "Question", "name": "¿Cuánto tarda en desarrollarse una app o una web?", "acceptedAnswer": { "@type": "Answer", "text": "Una página web profesional la entregamos en 2 semanas. Una app a medida o automatización con IA en 3 a 4 semanas." } },
         { "@type": "Question", "name": "¿Cuánto sale un proyecto con Ryndvai?", "acceptedAnswer": { "@type": "Answer", "text": "Las apps a medida arrancan desde $500 USD, las páginas web profesionales desde $600 USD y las automatizaciones con IA desde $500 USD." } },
-        { "@type": "Question", "name": "¿Cómo se realiza el pago?", "acceptedAnswer": { "@type": "Answer", "text": "Trabajamos con un anticipo al iniciar y el saldo contra entrega. Aceptamos transferencia, MercadoPago y métodos internacionales." } }
+        { "@type": "Question", "name": "¿Cómo se realiza el pago?", "acceptedAnswer": { "@type": "Answer", "text": "Trabajamos con un anticipo al iniciar y el saldo contra entrega. Aceptamos transferencia, MercadoPago y métodos internacionales." } },
+        { "@type": "Question", "name": "¿Tienen plan de mantenimiento después de entregar el proyecto?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Ofrecemos planes de mantenimiento mensual desde $100 USD que incluyen hosting profesional, SSL, backups, actualizaciones de seguridad, soporte técnico y cambios menores. El plan Standard de $200 USD/mes es el más popular. Opcional y cancelable cuando quieras." } }
       ]
     }
     </script>
@@ -112,7 +114,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=4" />
+    <link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
 
@@ -121,6 +123,7 @@
             <a href="/" class="nav-logo">Ryndvai<span>.</span></a>
             <ul class="nav-links">
                 <li><a href="#services">Servicios</a></li>
+                <li><a href="#maintenance">Mantenimiento</a></li>
                 <li><a href="#projects">Proyectos</a></li>
                 <li><a href="#process">Proceso</a></li>
                 <li><a href="#faq">FAQ</a></li>
@@ -195,6 +198,58 @@
                     <span class="service-cta">Ver automatización con IA →</span>
                 </a>
             </div>
+        </div>
+    </section>
+
+    <section id="maintenance">
+        <div class="container">
+            <div class="fade-up">
+                <p class="section-tag">Mantenimiento &amp; Soporte</p>
+                <h2 class="section-title">Tu web siempre funcionando,<br>sin que te preocupes</h2>
+                <p class="section-desc">Cuando entregamos tu proyecto, no te dejamos solo. Nuestros planes mensuales de mantenimiento cubren hosting, seguridad, actualizaciones y soporte técnico.</p>
+            </div>
+            <div class="maintenance-grid">
+                <div class="maint-card fade-up">
+                    <span class="maint-tier">// essentials</span>
+                    <p class="maint-price">$100 <span>USD/mes</span></p>
+                    <p class="maint-sub">Ideal para webs simples ya publicadas</p>
+                    <ul class="maint-features">
+                        <li>Hosting profesional incluido</li>
+                        <li>Certificado SSL renovado</li>
+                        <li>Backups semanales automáticos</li>
+                        <li>Actualizaciones de seguridad</li>
+                        <li>Monitoreo de uptime 24/7</li>
+                        <li>Soporte por email (72hs)</li>
+                    </ul>
+                </div>
+                <div class="maint-card featured fade-up">
+                    <span class="maint-tier">// standard</span>
+                    <p class="maint-price">$200 <span>USD/mes</span></p>
+                    <p class="maint-sub">El más elegido por PYMES y empresas</p>
+                    <ul class="maint-features">
+                        <li>Todo lo del plan Essentials</li>
+                        <li>Hasta 2hs mensuales de cambios menores</li>
+                        <li>Soporte prioritario por WhatsApp (48hs)</li>
+                        <li>Reporte mensual de performance</li>
+                        <li>Optimización SEO continua</li>
+                        <li>Actualización de contenido ilimitada</li>
+                    </ul>
+                </div>
+                <div class="maint-card fade-up">
+                    <span class="maint-tier">// premium</span>
+                    <p class="maint-price">$400 <span>USD/mes</span></p>
+                    <p class="maint-sub">Para apps y e-commerce con alto tráfico</p>
+                    <ul class="maint-features">
+                        <li>Todo lo del plan Standard</li>
+                        <li>Hasta 5hs mensuales de desarrollo</li>
+                        <li>Soporte 24hs prioritario</li>
+                        <li>Nuevas features menores incluidas</li>
+                        <li>Escalado de infraestructura</li>
+                        <li>Asesoría estratégica mensual (1hr)</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="maint-note fade-up"><strong>Sin compromiso:</strong> los planes son mensuales y cancelables cuando quieras. Todos los proyectos incluyen <strong>3 meses de garantía gratuita</strong> post-entrega. Después podés optar por cualquier plan según tu necesidad.</p>
         </div>
     </section>
 
