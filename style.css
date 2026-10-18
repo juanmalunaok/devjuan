@@ -211,7 +211,10 @@ section { padding: 120px 0; }
 .maint-features li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
 .plan-card { width: 100%; max-width: 640px; padding: 40px; }
 .maint-card.featured.plan-card::before { content: 'PLAN ÚNICO'; }
-.plan-monthly { font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.3; margin-bottom: 20px; color: var(--accent); }
+.plan-original { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 4px; }
+.plan-original s { color: var(--text-secondary); text-decoration-color: #ff4466; text-decoration-thickness: 2px; }
+.plan-discount { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; color: #000; background: var(--accent); padding: 3px 8px; border-radius: 100px; letter-spacing: 0.05em; }
+.plan-monthly {font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.3; margin-bottom: 20px; color: var(--accent); }
 .plan-monthly span { color: var(--text-muted); font-size: 0.9rem; font-weight: 400; letter-spacing: 0; }
 .plan-label { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.15em; margin: 28px 0 8px; padding-top: 24px; border-top: 1px solid var(--border); }
 .plan-includes { display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px; }
